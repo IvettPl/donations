@@ -53,7 +53,10 @@ h1 {
     font-size: 24px;
 }
 
-
+.main {
+    display: flex;
+    justify-content: space-between;
+}
 
 
 input,
@@ -89,6 +92,7 @@ img {
 .wrapper {
     max-width: 1264px;
     width: 100%;
+    padding: 0 20px;
     margin: 0 auto;
     box-sizing: border-box;
 }
@@ -97,8 +101,90 @@ img {
     border: 1px solid $dark-light;
     border-radius: 8px;
     box-shadow: 1px 3px 3px 0 rgba(62, 63, 64, 0.1);
+    &-top { 
+        padding: 28px 32px;
+        box-sizing: border-box;
+    }
+    &-bottom { 
+        background-color: $grey;
+        border-top: 1px solid $dark-light;
+        border-radius: 0 0 8px 8px;
+        padding: 16px 32px;
+        box-sizing: border-box;
+    }
 }
-.title {
-    padding: 28px 32px;
-    box-sizing: border-box;
+ 
+.icon {
+    width: 18px;
+    display: block;
+}
+ 
+.personal-id {
+    display: flex;
+    align-items: center;
+    span {
+        font-family: 'Source Code Pro', monospace;
+        display: block;
+        margin-right: 8px;
+    }
+    img {
+        cursor: pointer;
+    }
+    &-title {
+        font-family: 'Source Code Pro', monospace;
+        line-height: 20px;
+        font-size: 16px; 
+        color: $grey-dark;
+        margin-bottom: 4px;
+    } 
+}
+
+
+.status {
+    color: $green;
+    &-campaing {
+        display: flex;
+        align-items: center;
+    }
+
+    &-campaing-block {
+        position: relative;
+        padding: 0 32px;
+        box-sizing: border-box;
+        &:first-child {
+            padding-left: 0;
+            &:before {
+                display: none;
+            }
+        }
+        &:before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 1px;
+            height: 46px;
+            background-color: $grey-light;
+        }
+    }
+
+    &-campaing-title {
+        line-height: 20px;
+        font-size: 14px;     
+        color: $grey-dark;  
+        margin-bottom: 2px;
+    }
+    &-campaing-text {
+        display: flex;
+        align-items: center;
+        .icon {
+            margin-right: 8px;
+        }
+        a {
+            color: $blue;
+            &:hover {
+                text-decoration: none;
+            }
+        }
+    }
 }

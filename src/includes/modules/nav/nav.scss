@@ -1,0 +1,33 @@
+.nav {
+    background-color: $white;
+    width: 100%;
+    max-width: 264px;
+    position: sticky;
+    li {
+        border-bottom: 1px solid $dark-light;
+        display: flex;
+        align-items: center;
+        transition: background-color 300ms ease ;
+        padding: 0 16px;
+        box-sizing: border-box;
+        &:hover {
+            background-color: #F3F3F3;
+        }
+        &:last-child {
+            border-bottom: 0;
+        }
+        img {
+            margin-right: 8px;
+        }
+        a {
+            font-family: 'Work Sans', sans-serif;
+            line-height: 24px;
+            font-size: 16px;
+            color: $dark;
+            display: block;
+            text-decoration: none;
+            padding: 12px 0;
+            box-sizing: border-box;            
+        }
+    }
+}

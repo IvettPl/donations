@@ -145,6 +145,15 @@ h1 {
   font-size: 24px;
 }
 
+.main {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+}
+
 input,
 select {
   font-family: "Work Sans", sans-serif;
@@ -182,6 +191,7 @@ img {
 .wrapper {
   max-width: 1264px;
   width: 100%;
+  padding: 0 20px;
   margin: 0 auto;
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
@@ -195,10 +205,117 @@ img {
   box-shadow: 1px 3px 3px 0 rgba(62, 63, 64, 0.1);
 }
 
-.title {
+.box-top {
   padding: 28px 32px;
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
+}
+
+.box-bottom {
+  background-color: #FAFAFA;
+  border-top: 1px solid #DBDCDE;
+  border-radius: 0 0 8px 8px;
+  padding: 16px 32px;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+.icon {
+  width: 18px;
+  display: block;
+}
+
+.personal-id {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.personal-id span {
+  font-family: "Source Code Pro", monospace;
+  display: block;
+  margin-right: 8px;
+}
+
+.personal-id img {
+  cursor: pointer;
+}
+
+.personal-id-title {
+  font-family: "Source Code Pro", monospace;
+  line-height: 20px;
+  font-size: 16px;
+  color: #6C6D6F;
+  margin-bottom: 4px;
+}
+
+.status {
+  color: #00A651;
+}
+
+.status-campaing {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.status-campaing-block {
+  position: relative;
+  padding: 0 32px;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+.status-campaing-block:first-child {
+  padding-left: 0;
+}
+
+.status-campaing-block:first-child:before {
+  display: none;
+}
+
+.status-campaing-block:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 1px;
+  height: 46px;
+  background-color: #D7D8DA;
+}
+
+.status-campaing-title {
+  line-height: 20px;
+  font-size: 14px;
+  color: #6C6D6F;
+  margin-bottom: 2px;
+}
+
+.status-campaing-text {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.status-campaing-text .icon {
+  margin-right: 8px;
+}
+
+.status-campaing-text a {
+  color: #6665DD;
+}
+
+.status-campaing-text a:hover {
+  text-decoration: none;
 }
 
 .header {
@@ -206,17 +323,12 @@ img {
 }
 
 .search {
-  background-color: #FAFAFA;
-  border-top: 1px solid #DBDCDE;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  padding: 16px 32px;
-  -webkit-box-sizing: border-box;
-  box-sizing: border-box;
 }
 
 .search-wrap {
@@ -280,4 +392,99 @@ img {
 .select:focus {
   -webkit-box-shadow: 0 0 2px 1px #aaa;
   box-shadow: 0 0 2px 1px #aaa;
+}
+
+.donat-wrap {
+  width: 100%;
+  max-width: 936px;
+}
+
+.donat-wrap .box-top {
+  padding: 24px 32px;
+}
+
+.donat-num-info {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.donat-num-title {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-bottom: 4px;
+}
+
+.donat-num-title .icon {
+  margin-right: 8px;
+}
+
+.donat-num-title span {
+  line-height: 20px;
+  font-size: 14px;
+  color: #2F2F30;
+}
+
+.donat-num-change span {
+  color: #6C6D6F;
+}
+
+.donat-num-change .donat-num {
+  line-height: 32px;
+  font-size: 24px;
+  color: #00A651;
+}
+
+.nav {
+  background-color: #fff;
+  width: 100%;
+  max-width: 264px;
+  position: sticky;
+}
+
+.nav li {
+  border-bottom: 1px solid #DBDCDE;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-transition: background-color 300ms ease;
+  -o-transition: background-color 300ms ease;
+  transition: background-color 300ms ease;
+  padding: 0 16px;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+.nav li:hover {
+  background-color: #F3F3F3;
+}
+
+.nav li:last-child {
+  border-bottom: 0;
+}
+
+.nav li img {
+  margin-right: 8px;
+}
+
+.nav li a {
+  font-family: "Work Sans", sans-serif;
+  line-height: 24px;
+  font-size: 16px;
+  color: #2F2F30;
+  display: block;
+  text-decoration: none;
+  padding: 12px 0;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
 }

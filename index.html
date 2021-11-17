@@ -6,6 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://fonts.googleapis.com/css2?family=Source+Code+Pro&family=Work+Sans:wght@400;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Source+Code+Pro&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/main.min.css">
     <title>Donations</title>
 </head>
@@ -14,26 +15,102 @@
     <div class="wrapper">
         <header class="header">
             <div class="box">
-                <div class="title">
-                    <h1>Donations</h1>
-                </div>
-                <div class="search">
-                    <div class="search-wrap">
-                        <button></button>
-                        <input type="search" placeholder="Search">
-                    </div>
-
-                    <div class="select-wrap">
-                        <select class="select" name="select">
-                            <option>All statuses</option>
-                            <option>status 1</option>
-                            <option>status 2</option>
-                        </select>
+                <div class="box-top">
+                    <div class="title">
+                        <h1>Donations</h1>
                     </div>
                 </div>
+                <div class="box-bottom">
+                    <div class="search">
+                        <div class="search-wrap">
+                            <button></button>
+                            <input type="search" placeholder="Search">
+                        </div>
 
+                        <div class="select-wrap">
+                            <select class="select" name="select">
+                                <option>All statuses</option>
+                                <option>status 1</option>
+                                <option>status 2</option>
+                            </select>
+                        </div>
+                    </div>
+
+                </div>
             </div>
         </header>
+        <main class="main">
+            <section class="donat-wrap">
+                <div class="box">
+                    <div class="box-top">
+                        <div class="donat-info">
+                            <div class="donat-num-info">
+                                <div class="donat-num-info-column">
+                                    <div class="donat-num-title">
+                                        <img src="img/dollar-sign.svg" alt="dollar-sign" class="icon"> <span>Donation</span>
+                                    </div>
+                                    <div class="donat-num-change">
+                                        <span class="donat-num">€20.60 EUR</span> &asymp; <span>  $22.22 USD</span>
+                                    </div>
+                                </div>
+                                <div class="donat-num-info-column">
+                                    <div class="personal-id-title">ID</div>
+                                    <div class="personal-id">
+                                        <span>DYHY694Y</span> 
+                                        <img src="img/copy.svg" alt="copy" class="icon">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="box-bottom">
+                        <div class="status-campaing">
+                            <div class="status-campaing-block">
+                                <div class="status-campaing-title">
+                                    Status
+                                </div>
+                                <div class="status-campaing-text">
+                                    <img src="img/check.svg" alt="check" class="icon">
+                                    <span class="status">Success</span>
+                                </div>
+                            </div>
+                            <div class="status-campaing-block">
+                                <div class="status-campaing-title">
+                                    Supporter
+                                </div>
+                                <div class="status-campaing-text">
+                                    <a href="#" title='Charlotte Ann'>Charlotte Ann</a>
+                                </div>
+                            </div>
+                            <div class="status-campaing-block">
+                                <div class="status-campaing-title">
+                                    Campaign
+                                </div>
+                                <div class="status-campaing-text">
+                                    <a href="#" title='Charlotte Ann'>Workout for water</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <nav class="nav box">
+                <ul>
+                    <li>
+                        <img src="img/repeat.svg" alt="icon" class="icon"> <a href="#"> Change Amount</a> 
+                    </li>
+                    <li>
+                        <img src="img/wallet.svg" alt="Payment Method" class="icon"> <a href="#"> Change Payment Method</a> 
+                    </li>
+                    <li>
+                        <img src="img/calendar.svg" alt="Date" class="icon"> <a href="#"> Change Date</a> 
+                    </li>
+                    <li>
+                        <img src="img/x-circle.svg" alt="Recurring" class="icon"> <a href="#">Cancel Recurring</a> 
+                    </li>
+                </ul>
+            </nav>
+        </main>
     </div>
 
     <script src="js/main.min.js"></script>

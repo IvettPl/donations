@@ -1,0 +1,36 @@
+.donat {
+    &-wrap { 
+        width: 100%;
+        max-width: 936px;
+        .box-top {
+            padding: 24px 32px;
+        }
+    } 
+    &-num-info { 
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    &-num-title {
+        display: flex;
+        margin-bottom: 4px;
+        .icon {
+            margin-right: 8px;
+        }
+        span {
+            line-height: 20px;
+            font-size: 14px;     
+            color: $dark;       
+        } 
+    }
+    &-num-change {
+        span {
+            color: $grey-dark;
+        }
+        .donat-num {
+            line-height: 32px;
+            font-size: 24px;  
+            color: $green;
+        }
+    }
+}
