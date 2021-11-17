@@ -1,0 +1,76 @@
+<div class="box"> 
+    <div class="box-top">
+        <div class="tabs"> 
+            <div class="tabs__header">
+                <div class="tabs__header-item active" data-tab-name="tab-1">Behavior</div>
+                <div class="tabs__header-item" data-tab-name="tab-2">Appearance</div>
+                <div class="tabs__header-item" data-tab-name="tab-3">Custom Fields</div>
+                <div class="tabs__header-item" data-tab-name="tab-4">Questions</div>
+                <div class="tabs__header-item" data-tab-name="tab-5">URL Control</div>
+            </div>
+            <div class="tabs__content">
+                <div class="tabs__content-item active tab-1">
+                    <form action="">
+                        <div class="form-line">
+                            <label class="label label--fixed" for="">Designation</label>
+                            <div class="select-wrap">
+                                <select class="select" name="select"  >
+                                    <option >Match Checkout Setting</option>
+                                    <option > Setting</option> 
+                                </select>
+                            </div>                
+                        </div>
+                        <div class="form-line">
+                            <label class="label label--fixed" for="">Goal</label>
+                            <div class="form-line form-line--fields">
+                                <div class="field__wrap field__wrap--line">
+                                    <span>$</span>
+                                    <input class="field" type="text" placeholder="10.00">
+                                </div>
+                                <div class="select-wrap select-wrap--small">
+                                    <select class="select" name="select"  >
+                                        <option >USD</option>
+                                        <option > EUR</option> 
+                                    </select>
+                                </div> 
+                            </div> 
+                        </div>
+                        <div class="form-line form-line-start">
+                            <label class="label label--fixed" for="">Default Amount</label>
+                            <div class="form-line-group">
+                                <div class="form-line__item">
+                                    <input id="settings-1" type="radio" name="settings">
+                                    <label for="settings-1">Match Checkout Setting</label>
+                                </div>
+                                <div class="form-line__item">
+                                    <input id="settings-2" type="radio" name="settings" checked>
+                                    <label for="settings-2">Customize</label>
+                                </div>
+                                <div class="form-line__item form-line__item--square">
+                                    <input id="currency" type="checkbox" checked>
+                                    <label for="currency">Allow donor to change default currency</label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-line form-line--range">
+                            <label class="label label--fixed" for="">Border size</label>
+                            <div class="form-line form-line--fields">
+                                <input id="border" class="range-filed" type="range" min="1" max="200" step="1" value="2">
+                            </div>
+                        </div>
+                        <div class="form-line form-line--range">
+                            <label class="label label--fixed" for="">Border radius</label>
+                            <div class="form-line form-line--fields">
+                                <input id="radius" class="range-filed range-filed--last" type="range" min="1" max="200" step="1" value="15">
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div> 
+    </div>
+    <div class="box-bottom">
+        <button class="btn btn--green" type="button">Save changes</button>
+        <button class="btn btn--white" type="button">Cancel</button>        
+    </div>
+</div>   

@@ -2,8 +2,53 @@
     &-wrap { 
         width: 100%;
         max-width: 936px;
-        .box-top {
-            padding: 24px 32px;
+         
+        .box {
+            &-top {
+                padding: 24px 32px;
+            }
+            &:first-child {
+                margin-bottom: 24px;
+            }
+            &:last-child {  
+                .box-bottom { 
+                    width: 100%; 
+                    display: flex;
+                    background-color: $yellow;
+                    .btn {
+                        display: block;
+                        font-family: 'Work Sans', sans-serif;
+                        line-height: 24px;
+                        font-size: 16px;
+                        color: $dark;
+                        border-radius: 6px;
+                        box-sizing: border-box;
+                        cursor: pointer;
+                        transition: opacity 300ms ease;
+            
+                        &:hover {
+                            opacity: .7;
+                        }
+            
+                        &--green {
+                            padding: 12px 24px;
+                            color: $white;
+                            background-color: $green;
+                            border: 0;
+                        }
+            
+                        &--white {
+                            margin-left: 16px;
+                            padding: 11px 24px;
+                            background-color: $white;
+                            border: 1px solid $dark-lighter;
+                        }
+                    }
+                }
+                .box-top {
+                    padding: 32px 0 0;
+                }
+            }
         }
     } 
     &-num-info { 

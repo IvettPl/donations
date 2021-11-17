@@ -1,6 +1,11 @@
 .search {
     display: flex;
     align-items: center;
+    .select-wrap {
+        select {
+            border: 0;
+        } 
+    }
 
     &-wrap {
        width: 100%;
