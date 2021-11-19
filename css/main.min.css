@@ -819,7 +819,13 @@ img {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  border-bottom: 1px solid #DBDCDE;
+}
+
+.tabs__header-js {
+  margin-bottom: -1px;
+  overflow: hidden;
+  position: relative;
+  z-index: 1;
 }
 
 .tabs__header-item {
@@ -834,7 +840,6 @@ img {
   -webkit-transition: color 300ms ease;
   -o-transition: color 300ms ease;
   transition: color 300ms ease;
-  margin-bottom: -1px;
   padding: 12px 15px 12px;
 }
 
@@ -865,6 +870,7 @@ img {
 .tabs__content {
   padding: 37px 60px 40px;
   position: relative;
+  border-top: 1px solid #DBDCDE;
 }
 
 .tabs__content-item {

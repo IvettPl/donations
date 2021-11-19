@@ -37,23 +37,21 @@ tabs();
 
 
 function checkWidth(){
-    var windowWidth = window.innerWidth ;
-        let tabSlide = document.querySelector(".js-tabs__header");
-        let tabHeaderItem = document.querySelector(".tab__header-item");
+    var windowWidth = document.documentElement.clientWidth;
+        let tabSlide = document.querySelector(".tabs__header-js");
+        let tabHeaderItem = document.querySelector(".tabs__header-item");
         let tabHeader = document.querySelector(".tabs__header");
         
    
           if(windowWidth < 600){ 
             tabSlide.classList.add('mySwiperTab');
-            tabSlide.classList.add('swiper-container ');
-            tabHeaderItem.classList.add('swiper-slide');
+            tabSlide.classList.add('swiper-container'); 
             tabHeader.classList.add('swiper-wrapper');
           }
           else{
-            // tabSlide.classList.remove('mySwiperTab'); 
-            // tabSlide.classList.remove('swiper-container ');
-            // tabHeaderItem.classList.remove('swiper-slide');
-            // tabHeader.classList.remove('swiper-wrapper');
+            tabSlide.classList.remove('mySwiperTab'); 
+            tabSlide.classList.remove('swiper-container '); 
+            tabHeader.classList.remove('swiper-wrapper');
           }                   
 }
 
@@ -64,5 +62,5 @@ window.addEventListener('resize', function(event) {
 }, true); 
 
 var swiper5 = new Swiper(".mySwiperTab", {     
-    slidesPerView: 2,
+    slidesPerView: 'auto',
   }); 

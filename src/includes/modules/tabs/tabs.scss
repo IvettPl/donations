@@ -2,7 +2,13 @@
     width: 100%;
     &__header {
         display: flex;
-        border-bottom: 1px solid $dark-light;
+
+        &-js {
+            margin-bottom: -1px;
+            overflow: hidden;
+            position: relative;
+            z-index: 1;
+        }
         &-item {
             line-height: 20px;
             font-size: 12px;
@@ -13,7 +19,6 @@
             border: 1px solid transparent;
             cursor: pointer;
             transition: color 300ms ease;
-            margin-bottom: -1px;
             padding: 12px 15px 12px;
 
             &:first-child {
@@ -44,6 +49,7 @@
     &__content {
         padding: 37px 60px 40px;
         position: relative;
+        border-top: 1px solid $dark-light;
 
         @media(max-width: 610px) {
             padding: 37px 33px 40px;
