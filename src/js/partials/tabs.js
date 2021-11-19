@@ -5,6 +5,13 @@ let tabs = function() {
 
     tabNav.forEach(item => {
         item.addEventListener('click', selectTabNav);
+        // item.addEventListener('keydown', selectTabNav);
+        // item.addEventListener('keydown', function(e) {
+        //     if (e.keyCode === 13) {
+        //         selectTabNav();
+        //         e.preventDefault();
+        //     }
+        // });
     });
 
     function selectTabNav() {
@@ -27,3 +34,36 @@ let tabs = function() {
 }
 
 tabs();
+
+
+function checkWidth(){
+    var windowWidth = $('body').innerWidth();  
+        let tabSlide = $(".js-tabs__header");
+        let tabHeaderItem = $(".tab__header-item");
+        let tabHeader = $(".tabs__header");
+        
+   
+          if(windowWidth < 600){ 
+            tabSlide.addClass('mySwiperTab');
+            tabSlide.addClass('swiper-container ');
+            tabHeaderItem.addClass('swiper-slide');
+            tabHeader.addClass('swiper-wrapper');
+          }
+          else{
+            tabSlide.removeClass('mySwiperTab'); 
+            tabSlide.removeClass('swiper-container ');
+            tabHeaderItem.removeClass('swiper-slide');
+            tabHeader.removeClass('swiper-wrapper');
+          }                   
+}
+
+checkWidth();
+
+$(window).resize(function(){
+checkWidth();  
+}); 
+
+var swiper5 = new Swiper(".mySwiperTab", {
+     
+    slidesPerView: 2,
+  });

@@ -1,18 +1,26 @@
 .donat {
-    &-wrap { 
-        width: 100%;
-        max-width: 936px;
-         
+    &-wrap {
+        width: calc(100% - 288px);
+
+        @media(max-width: 940px) {
+            width: 100%;
+            order: 1;
+        }
+
         .box {
             &-top {
                 padding: 24px 32px;
+
+                @media(max-width: 450px) {
+                    padding: 24px 20px;
+                }
             }
             &:first-child {
                 margin-bottom: 24px;
             }
-            &:last-child {  
-                .box-bottom { 
-                    width: 100%; 
+            &:last-child {
+                .box-bottom {
+                    width: 100%;
                     display: flex;
                     background-color: $yellow;
                     .btn {
@@ -25,20 +33,24 @@
                         box-sizing: border-box;
                         cursor: pointer;
                         transition: opacity 300ms ease;
-            
+
                         &:hover {
                             opacity: .7;
                         }
-            
+
+                        &:focus {
+                            box-shadow: 0 0 3px 1px #aaa;
+                        }
+
                         &--green {
                             padding: 12px 24px;
                             color: $white;
                             background-color: $green;
                             border: 0;
                         }
-            
+
                         &--white {
-                            margin-left: 16px;
+                            margin-left: 14px;
                             padding: 11px 24px;
                             background-color: $white;
                             border: 1px solid $dark-lighter;
@@ -50,23 +62,44 @@
                 }
             }
         }
-    } 
-    &-num-info { 
+    }
+    &-num-info {
         display: flex;
         justify-content: space-between;
         align-items: center;
+
+        @media(max-width: 560px) {
+            flex-direction: column;
+            align-items: flex-start;
+        }
+
+        &-column {
+
+            &:last-child {
+                margin-top: -11px;
+
+                @media(max-width: 940px) {
+                    margin-top: 16px;
+                }
+            }
+        }
     }
     &-num-title {
         display: flex;
         margin-bottom: 4px;
+
+        @media(max-width: 560px) {
+            margin-bottom: 0;
+        }
+
         .icon {
-            margin-right: 8px;
+            margin-right: 7px;
         }
         span {
             line-height: 20px;
-            font-size: 14px;     
-            color: $dark;       
-        } 
+            font-size: 14px;
+            color: $dark;
+        }
     }
     &-num-change {
         span {
@@ -74,8 +107,9 @@
         }
         .donat-num {
             line-height: 32px;
-            font-size: 24px;  
+            font-size: 24px;
             color: $green;
+            margin-right: 3px;
         }
     }
 }

@@ -1,18 +1,26 @@
 .nav {
     background-color: $white;
     width: 100%;
-    max-width: 264px;
+    max-width: 262px;
     position: sticky;
     top: 24px;
+
+    @media(max-width: 940px) {
+        max-width: 100%;
+        position: static;
+        margin-bottom: 23px;
+    }
+
     li {
         border-bottom: 1px solid $dark-light;
         display: flex;
         align-items: center;
         transition: background-color 300ms ease ;
-        padding: 0 16px;
         box-sizing: border-box;
         &:hover {
-            background-color: #F3F3F3;
+            a {
+                background-color: #F3F3F3;
+            }
         }
         &:last-child {
             border-bottom: 0;
@@ -21,14 +29,28 @@
             margin-right: 8px;
         }
         a {
+            width: 100%;
             font-family: 'Work Sans', sans-serif;
             line-height: 24px;
             font-size: 16px;
             color: $dark;
-            display: block;
+            display: flex;
+            align-items: center;
             text-decoration: none;
-            padding: 12px 0;
-            box-sizing: border-box;            
+            padding: 13px 15px;
+            box-sizing: border-box;
+
+            @media(max-width: 940px) {
+                padding: 13px 33px;
+            }
+
+            @media(max-width: 450px) {
+                padding: 13px 20px;
+            }
+
+            &:focus {
+                background-color: #F3F3F3;
+            }
         }
     }
 }
