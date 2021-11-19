@@ -7,7 +7,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://fonts.googleapis.com/css2?family=Source+Code+Pro&family=Work+Sans:wght@400;600&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Source+Code+Pro&display=swap" rel="stylesheet">
+
     <link rel="stylesheet" href="css/main.min.css">
+    <script src="libs/css/swiper-bundle.min.css"></script>
     <title>Donations</title>
 </head>
 
@@ -23,8 +25,8 @@
                 <div class="box-bottom">
                     <div class="search">
                         <div class="search-wrap">
-                            <button></button>
-                            <input type="search" placeholder="Search">
+                            <button type="button" aria-label="Найти"></button>
+                            <input type="search" placeholder="Search" aria-labelledby="Поле поиска">
                         </div>
 
                         <div class="select-wrap">
@@ -96,12 +98,14 @@
                 <div class="box">
                     <div class="box-top">
                         <div class="tabs">
-                            <div class="tabs__header">
-                                <div class="tabs__header-item active" data-tab-name="tab-1">Behavior</div>
-                                <div class="tabs__header-item" data-tab-name="tab-2">Appearance</div>
-                                <div class="tabs__header-item" data-tab-name="tab-3">Custom Fields</div>
-                                <div class="tabs__header-item" data-tab-name="tab-4">Questions</div>
-                                <div class="tabs__header-item" data-tab-name="tab-5">URL Control</div>
+                            <div class="js-tabs__header">
+                                <div class="tabs__header">
+                                    <div class="tabs__header-item active" data-tab-name="tab-1" tabindex="0" role="button" aria-label="Behavior Tab">Behavior</div>
+                                    <div class="tabs__header-item" data-tab-name="tab-2" tabindex="0" role="button" aria-label="Appearance Tab">Appearance</div>
+                                    <div class="tabs__header-item" data-tab-name="tab-3" tabindex="0" role="button" aria-label="Custom Fields Tab">Custom Fields</div>
+                                    <div class="tabs__header-item" data-tab-name="tab-4" tabindex="0" role="button" aria-label="Questions Tab">Questions</div>
+                                    <div class="tabs__header-item" data-tab-name="tab-5" tabindex="0" role="button" aria-label="URL Control Tab">URL Control</div>
+                                </div>
                             </div>
                             <div class="tabs__content">
                                 <div class="tabs__content-item active tab-1">
@@ -120,10 +124,10 @@
                                             <div class="form-line form-line--fields">
                                                 <div class="field__wrap field__wrap--line">
                                                     <span>$</span>
-                                                    <input class="field" type="text" placeholder="10.00">
+                                                    <input class="field" type="text" placeholder="10.00" aria-labelledby="Enter the amount">
                                                 </div>
                                                 <div class="select-wrap select-wrap--small">
-                                                    <select class="select" name="select">
+                                                    <select class="select" name="select" aria-label="Choose currency">
                                                         <option>USD</option>
                                                         <option>EUR</option>
                                                     </select>
@@ -164,7 +168,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="box-bottom">
+                    <div class="box-bottom box-bottom--tabs">
                         <button class="btn btn--green" type="button">Save changes</button>
                         <button class="btn btn--white" type="button">Cancel</button>
                     </div>
@@ -173,22 +177,33 @@
             <nav class="nav box">
                 <ul>
                     <li>
-                        <img src="img/repeat.svg" alt="icon" class="icon"> <a href="#"> Change Amount</a> 
+                        <a href="#">
+                            <img src="img/repeat.svg" alt="icon" class="icon">Change Amount
+                        </a>
                     </li>
                     <li>
-                        <img src="img/wallet.svg" alt="Payment Method" class="icon"> <a href="#"> Change Payment Method</a> 
+                        <a href="#">
+                            <img src="img/wallet.svg" alt="Payment Method" class="icon">Change Payment Method
+                        </a>
                     </li>
                     <li>
-                        <img src="img/calendar.svg" alt="Date" class="icon"> <a href="#"> Change Date</a> 
+                        <a href="#">
+                            <img src="img/calendar.svg" alt="Date" class="icon">Change Date
+                        </a>
                     </li>
                     <li>
-                        <img src="img/x-circle.svg" alt="Recurring" class="icon"> <a href="#">Cancel Recurring</a> 
+                        <a href="#">
+                            <img src="img/x-circle.svg" alt="Recurring" class="icon">Cancel Recurring
+                        </a>
                     </li>
                 </ul>
             </nav>
         </main>
     </div>
 
+
+    <script src="js/swiper.min.js" type="text/javascript" charset="utf-8"></script>
+    <script src="js/swiper-bundle.min.js"></script>
     <script src="js/main.min.js"></script>
 </body>
 

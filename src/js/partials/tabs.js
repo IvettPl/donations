@@ -37,33 +37,32 @@ tabs();
 
 
 function checkWidth(){
-    var windowWidth = $('body').innerWidth();  
-        let tabSlide = $(".js-tabs__header");
-        let tabHeaderItem = $(".tab__header-item");
-        let tabHeader = $(".tabs__header");
+    var windowWidth = window.innerWidth ;
+        let tabSlide = document.querySelector(".js-tabs__header");
+        let tabHeaderItem = document.querySelector(".tab__header-item");
+        let tabHeader = document.querySelector(".tabs__header");
         
    
           if(windowWidth < 600){ 
-            tabSlide.addClass('mySwiperTab');
-            tabSlide.addClass('swiper-container ');
-            tabHeaderItem.addClass('swiper-slide');
-            tabHeader.addClass('swiper-wrapper');
+            tabSlide.classList.add('mySwiperTab');
+            tabSlide.classList.add('swiper-container ');
+            tabHeaderItem.classList.add('swiper-slide');
+            tabHeader.classList.add('swiper-wrapper');
           }
           else{
-            tabSlide.removeClass('mySwiperTab'); 
-            tabSlide.removeClass('swiper-container ');
-            tabHeaderItem.removeClass('swiper-slide');
-            tabHeader.removeClass('swiper-wrapper');
+            // tabSlide.classList.remove('mySwiperTab'); 
+            // tabSlide.classList.remove('swiper-container ');
+            // tabHeaderItem.classList.remove('swiper-slide');
+            // tabHeader.classList.remove('swiper-wrapper');
           }                   
 }
 
 checkWidth();
 
-$(window).resize(function(){
-checkWidth();  
-}); 
+window.addEventListener('resize', function(event) {
+    checkWidth();
+}, true); 
 
-var swiper5 = new Swiper(".mySwiperTab", {
-     
+var swiper5 = new Swiper(".mySwiperTab", {     
     slidesPerView: 2,
-  });
+  }); 
